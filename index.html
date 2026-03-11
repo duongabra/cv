@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Frontend Developer / Full-Stack</title>
+  <style>
+    :root {
+      --text: #1a1a1a;
+      --muted: #4a4a4a;
+      --accent: #2563eb;
+      --bg: #ffffff;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-size: 11pt;
+      line-height: 1.45;
+      color: var(--text);
+      background: var(--bg);
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 28px 32px 40px;
+    }
+    @media print {
+      body { padding: 0; max-width: 100%; }
+      .no-print { display: none; }
+    }
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+    .tagline {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .contact a { color: var(--accent); text-decoration: none; }
+    .contact a:hover { text-decoration: underline; }
+    h2 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+      margin: 20px 0 12px;
+    }
+    .summary { margin-bottom: 4px; }
+    .job {
+      margin-bottom: 16px;
+    }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px 8px;
+    }
+    .job-title { font-weight: 600; }
+    .job-date { font-size: 0.9rem; color: var(--muted); }
+    .job-company { font-size: 0.9rem; color: var(--muted); margin-bottom: 4px; }
+    ul {
+      padding-left: 18px;
+      margin: 6px 0 0;
+    }
+    li { margin-bottom: 3px; }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px 24px;
+      margin-top: 12px;
+    }
+    @media (max-width: 520px) {
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+    .skill-item {
+      padding: 10px 14px;
+      border-radius: 6px;
+      border-left: 3px solid var(--accent);
+      background: #f8fafc;
+    }
+    .skill-cat {
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+    .skill-list { font-size: 0.85rem; color: var(--muted); line-height: 1.5; }
+    .skills-compact { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+    .skill-line { font-size: 0.9rem; color: var(--text); }
+    .skill-line strong { color: var(--accent); font-weight: 600; }
+    .cert { margin-bottom: 10px; }
+    .cert strong { font-size: 0.9rem; }
+    .cert-link { font-size: 0.8rem; color: var(--muted); word-break: break-all; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Đỗ Tùng Dương</h1>
+    <p class="tagline">Frontend-focused Full-Stack Engineer · React Specialist · Web3 &amp; AI Products · Team Lead</p>
+    <div class="contact">
+      <a href="mailto:duong98kk@gmail.com">duong98kk@gmail.com</a>
+      <span>·</span>
+      <span>0969 374 623</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">
+      Frontend-focused Full-Stack Engineer with 5+ years of experience building scalable React applications. Experienced in Web3 product development, payment integrations (Stripe, RevenueCat), and AI-assisted development workflows using tools like Cursor and OpenClaw. Led cross-functional teams (FE, BE, Design, QC) to deliver production Web3 and mobile applications. Comfortable taking multiple roles including Team Lead, Product Owner, and Scrum Master when needed.
+    </p>
+  </section>
+
+  <section>
+    <h2>Work Experience</h2>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Frontend-focused Fullstack Developer</span>
+        <span class="job-date">2024 – Present</span>
+      </div>
+      <div class="job-company">Lab3 · Web3</div>
+      <ul>
+        <li>Led development of Web3 products used in production, aligning technical delivery with business goals.</li>
+        <li>Implemented end-to-end features across React frontend, Node.js/NestJS backend, and React Native/Swift mobile apps.</li>
+        <li>Coordinated cross-functional teams (FE, BE, Design, QC) and contributed to product ideation and roadmap planning.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Team Lead · Developer</span>
+        <span class="job-date">2023 – 2024</span>
+      </div>
+      <div class="job-company">Technixo · Web3</div>
+      <ul>
+        <li>Led cross-functional team of 5 (FE, BE, Design, QC) delivering Web3 products used in production.</li>
+        <li>Scrum Master: facilitated ceremonies, backlog refinement, and continuous improvement; also PO and mentor for interns.</li>
+        <li>Contributed to ideation and sales processes.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Frontend Developer</span>
+        <span class="job-date">2023</span>
+      </div>
+      <div class="job-company">Homa · Web3</div>
+      <ul>
+        <li>Developed Web3 product features using React; collaborated with backend and design.</li>
+        <li>Collaborated with backend and design to ship production releases.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Frontend Developer</span>
+        <span class="job-date">2021 – 2022</span>
+      </div>
+      <div class="job-company">FPT Software · Web2</div>
+      <ul>
+        <li>Built and maintained React.js and Vue.js applications; collaborated with backend and design.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Key Achievements</h2>
+    <ul>
+      <li>Built AI-assisted development workflows using Cursor and OpenClaw to accelerate code generation and testing.</li>
+      <li>Led a cross-functional team of 5 engineers delivering production Web3 products.</li>
+      <li>Delivered Web2 and Web3 applications across multiple companies, contributing to product roadmap, mentoring interns, and supporting ideation and sales processes.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Latest Project</h2>
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Interns Market — AI Agent Marketplace</span>
+      </div>
+      <p class="skill-list">AI agent marketplace platform enabling domain-specific agents (e.g. voice conversion). Built MVP using Next.js and Supabase, enabling early beta testing with initial users. Responsible for frontend architecture and backend APIs. Team: 3 engineers (Team Lead + PO: myself; 1 FE, 1 BE; 1 QC).</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skills-compact">
+      <span class="skill-line"><strong>Frontend:</strong> React, Next.js, Vue, TypeScript, Redux/Zustand, Jest</span>
+      <span class="skill-line"><strong>Backend:</strong> Node.js, NestJS, Supabase</span>
+      <span class="skill-line"><strong>Web3:</strong> ethers.js, WalletConnect, MetaMask</span>
+      <span class="skill-line"><strong>Web3 Games:</strong> game development, blockchain integration</span>
+      <span class="skill-line"><strong>3D &amp; Visualization:</strong> three.js, coordinate systems</span>
+      <span class="skill-line"><strong>Mapping:</strong> map rendering and geospatial integration</span>
+      <span class="skill-line"><strong>Payments:</strong> Stripe, RevenueCat, App Store</span>
+      <span class="skill-line"><strong>Mobile:</strong> React Native, Swift</span>
+      <span class="skill-line"><strong>AI &amp; workflow:</strong> Cursor, OpenClaw, Scrum Master, Team Lead, mentoring</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education &amp; Certifications</h2>
+    <div class="cert">
+      <strong>English</strong> — TOEIC 535 (2019), professional working proficiency
+    </div>
+    <div class="cert">
+      <strong>FreeCodeCamp</strong> — Responsive Web Design V8, Front-End Libraries V8, JavaScript Algorithms &amp; Data Structures V7<br>
+      <span class="cert-link">freecodecamp.org/certification/hoangtulaptrinh/</span>
+    </div>
+  </section>
+</body>
+</html>

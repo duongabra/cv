@@ -1,0 +1,13 @@
+{
+  "name": "cv",
+  "private": true,
+  "scripts": {
+    "dev": "live-server --open=index.html --port=3000",
+    "start": "live-server --open=index.html --port=3000",
+    "pdf": "node scripts/generate-pdf.js"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "puppeteer": "^23.0.0"
+  }
+}

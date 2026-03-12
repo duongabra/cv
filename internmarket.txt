@@ -1,0 +1,67 @@
+# Interns Market — User flow: Renting an agent
+
+## Overview
+
+When a user rents an agent, the system provisions a dedicated OpenClaw instance on a VPS, installs the agent’s skills, and connects it to the user’s chosen channel (Telegram, Zalo, or in-app UI).
+
+---
+
+## Flow: User rents an agent
+
+1. **User selects and pays for an agent**
+   - User picks an agent (e.g. video dubbing, content translation) on the marketplace.
+   - Payment is completed (Stripe / existing payment flow).
+   - Order is created and linked to the user and the agent template (skills, config).
+
+2. **System allocates a VPS**
+   - System picks an available VPS from the pre-purchased pool (or triggers provisioning if needed).
+   - VPS is marked as “in use” for this order/user.
+
+3. **System SSHs into the VPS**
+   - Backend (or a worker) connects to the VPS via SSH (key-based).
+   - Ensures required dependencies are present (Docker / Node / OpenClaw runtime, etc.).
+
+4. **Setup OpenClaw on the VPS**
+   - Install or start OpenClaw on the VPS (e.g. via Docker image or installed binary).
+   - Load the agent’s **skill set** (skills required by that agent template) into this OpenClaw instance.
+   - Apply agent-specific config (env vars, model, tools allowed, etc.).
+   - Run health check so the instance is ready to receive tasks.
+
+5. **Connect to the user’s channel**
+   - System links this OpenClaw instance to the user’s chosen channel:
+     - **Telegram:** create or use bot, link bot to this user/order, forward messages to OpenClaw and stream replies back.
+     - **Zalo:** integrate Zalo OA/API, same idea: user messages → OpenClaw → replies back to Zalo.
+     - **In-app UI:** user talks to the agent inside Interns Market web app; backend relays messages between frontend and the OpenClaw instance on the VPS (e.g. WebSocket or polling).
+   - User is notified that the agent is ready (email / in-app / channel message).
+
+6. **User uses the agent**
+   - User sends tasks via the chosen channel (Telegram, Zalo, or in-app).
+   - OpenClaw on the VPS runs the skills (e.g. process video, call APIs) and returns results.
+   - Results are sent back over the same channel (or via link in UI).
+
+7. **End of rental / cleanup (optional)**
+   - When the rental period ends or user cancels, system can tear down the OpenClaw instance, free the VPS, and optionally snapshot logs for support.
+
+---
+
+## Summary diagram (text)
+
+```
+[User] → Pay for agent → [Backend]
+                              ↓
+                    Allocate VPS from pool
+                              ↓
+                    SSH → VPS → Install OpenClaw + skills
+                              ↓
+                    Connect to channel (Telegram | Zalo | In-app UI)
+                              ↓
+[User] ← messages ← [OpenClaw on VPS] ← messages ← [User]
+```
+
+---
+
+## Notes
+
+- **Skills:** Each agent template has a fixed set of skills; the provisioning step copies/injects those skills into the OpenClaw instance on the VPS.
+- **Security:** SSH keys and channel tokens (Telegram, Zalo) stored securely; no credentials in code.
+- **Scaling:** One VPS can run one or more OpenClaw instances depending on capacity; allocation logic can be one-agent-per-VPS or many-agents-per-VPS by design.

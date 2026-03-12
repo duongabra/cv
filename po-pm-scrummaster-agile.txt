@@ -1,0 +1,44 @@
+# Vai trò quản lý team (PO / PM / Scrum Master) — Chuẩn bị phỏng vấn
+
+Tài liệu ngắn gọn để trả lời khi bị hỏi về vai trò quản lý team. Không đi sâu lý thuyết, chỉ nói đúng việc em làm.
+
+---
+
+## Luồng tổng quát
+
+1. **Sếp có ý tưởng** cho một dự án mới.
+2. **Em tự pick thành viên** vào team (chọn người phù hợp với dự án).
+3. **Lên kế hoạch từng sprint** — mỗi sprint **1 tuần**.
+4. **Tổ chức các cuộc họp:**
+   - **Start sprint** (đầu sprint): mục tiêu sprint, commitment, task cho từng người.
+   - **End sprint** (cuối sprint): tổng kết, demo nội bộ, chuẩn bị sprint sau.
+   - **Daily meeting** (mỗi ngày): **10 phút đầu ngày** — mỗi người nói đã làm gì, sẽ làm gì, có blocker không.
+   - **Họp với sếp** (ví dụ mỗi tuần): **báo cáo tiến độ** + **demo** cho sếp những phần đã làm; sếp xem và cho feedback.
+
+---
+
+## Khi bị hỏi: "Anh/chị đóng vai trò gì trong quản lý team?"
+
+Có thể trả lời ngắn:
+
+- "Sếp đưa ra ý tưởng dự án, em **tự chọn thành viên** vào team và **lên kế hoạch** từng sprint — mỗi sprint 1 tuần. Em tổ chức **start sprint**, **end sprint**, và **daily 10 phút** đầu ngày. Mỗi tuần em **họp với sếp** để báo cáo tiến độ và **demo** những phần đã làm. Em đóng vai vừa PO vừa PM của dự án đó, đồng thời điều hành các cuộc họp kiểu Scrum (daily, start/end sprint)."
+
+---
+
+## Một số câu hỏi thường gặp
+
+**"Sprint dài bao lâu?"**  
+— 1 tuần 1 sprint.
+
+**"Daily meeting bao lâu?"**  
+— Khoảng 10 phút đầu ngày, mỗi người nói nhanh: đã làm gì, sẽ làm gì, có blocker không.
+
+**"Ai quyết định pick ai vào team?"**  
+— Em tự pick thành viên phù hợp với dự án (có thể thảo luận với sếp nếu cần).
+
+**"Sếp can thiệp vào sprint không?"**  
+— Sếp chủ yếu đưa ý tưởng và xem tiến độ qua buổi báo cáo + demo mỗi tuần; việc chia task, sprint planning do em và team tự quyết.
+
+---
+
+*File dùng để ôn nhanh trước khi phỏng vấn.*

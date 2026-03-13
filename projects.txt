@@ -1,0 +1,5 @@
+geo Report BE: craw các subpage bằng xml kết hợp craw các thẻ a, href ở html
+chấm điển: soạn sẵn các tiêu chí cần thiết rồi ném lên llm cùng html craw được
+
+lipstick: dùng thư viện python để biến ảnh son thành mã màu hex
+rồi ném ảnh gốc + hex lên llm để get ảnh mới

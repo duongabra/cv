@@ -1,5 +1,17 @@
-geo Report BE: craw các subpage bằng xml kết hợp craw các thẻ a, href ở html
-chấm điển: soạn sẵn các tiêu chí cần thiết rồi ném lên llm cùng html craw được
+Interns Market
+Design: Pencil.dev
+FE    : NextJS
+BE    : NodeJS
 
+Geo Report
+FE    : NextJS
+BE    : NodeJS, craw các subpage bằng xml kết hợp craw các thẻ a, href ở html
+AI    : Chấm điển soạn sẵn các tiêu chí cần thiết rồi ném lên llm cùng html craw được
+
+Lipstick
+FE    : Swift
+BE    : NodeJS     
 lipstick: dùng thư viện python để biến ảnh son thành mã màu hex
 rồi ném ảnh gốc + hex lên llm để get ảnh mới
+
+

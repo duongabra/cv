@@ -1,0 +1,1 @@
+Bài toán nhiều người truy cập cùng 1 lúc: CCU, chia ra nhiều server trong 1 vps để giảm tải, dùng balancer
